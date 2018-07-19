@@ -103,7 +103,7 @@ class PostController extends Controller
 
         $post-> frequency = $frequency;
 
-        $nextvisit = $now->addMinutes($frequency);
+        $nextvisit = $now->addMinutes($frequency)->toTimeString();
 
         $post-> nextvisit = $nextvisit;
       
